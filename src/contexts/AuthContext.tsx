@@ -21,7 +21,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (!supabase) {
-      console.error('Supabase 클라이언트 초기화 실패');
       setLoading(false);
       return;
     }
@@ -32,7 +31,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const { data: { session } } = await supabase.auth.getSession();
         setUser(session?.user ?? null);
       } catch (error) {
-        console.error('세션 확인 오류:', error);
+        // 에러는 조용히 처리
       } finally {
         setLoading(false);
       }

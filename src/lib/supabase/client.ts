@@ -14,12 +14,7 @@ export function createClient() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  // 디버깅
   if (!supabaseUrl || !supabaseAnonKey) {
-    console.error('❌ Supabase 환경 변수 누락:', {
-      url: supabaseUrl ? '✓' : '✗',
-      key: supabaseAnonKey ? '✓' : '✗',
-    });
     return null;
   }
 
