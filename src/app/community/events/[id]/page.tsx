@@ -8,11 +8,12 @@ import eventsData from '@/data/events.json';
 import styles from './page.module.scss';
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const event = eventsData.find((e) => e.id === params.id);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const event = eventsData.find((e) => e.id === id);
   if (!event) return { title: '이벤트' };
   
   return {
@@ -32,8 +33,9 @@ const CATEGORY_LABELS: Record<string, string> = {
   collaboration: '콜라보',
 };
 
-export default function EventDetailPage({ params }: PageProps) {
-  const event = eventsData.find((e) => e.id === params.id);
+export default async function EventDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const event = eventsData.find((e) => e.id === id);
 
   if (!event) {
     notFound();

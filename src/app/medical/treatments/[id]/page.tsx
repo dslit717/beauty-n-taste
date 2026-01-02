@@ -13,11 +13,12 @@ import { Review } from '@/types/medical';
 import styles from './page.module.scss';
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const treatment = treatmentsData.find((t) => t.id === params.id);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const treatment = treatmentsData.find((t) => t.id === id);
   if (!treatment) return { title: '시술 정보' };
   
   return {
@@ -31,8 +32,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function TreatmentDetailPage({ params }: PageProps) {
-  const treatment = treatmentsData.find((t) => t.id === params.id);
+export default async function TreatmentDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const treatment = treatmentsData.find((t) => t.id === id);
 
   if (!treatment) {
     notFound();

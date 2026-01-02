@@ -8,11 +8,12 @@ import productsData from '@/data/products.json';
 import styles from './page.module.scss';
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const product = productsData.find((p) => p.id === params.id);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const product = productsData.find((p) => p.id === id);
   if (!product) return { title: '상품 정보' };
   
   return {
@@ -33,8 +34,9 @@ const CATEGORY_LABELS: Record<string, string> = {
   'inner-beauty': '이너뷰티',
 };
 
-export default function ProductDetailPage({ params }: PageProps) {
-  const product = productsData.find((p) => p.id === params.id);
+export default async function ProductDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const product = productsData.find((p) => p.id === id);
 
   if (!product) {
     notFound();

@@ -10,11 +10,12 @@ import { formatPrice } from '@/lib/utils';
 import styles from './page.module.scss';
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const restaurant = restaurantsData.find((r) => r.id === params.id);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const restaurant = restaurantsData.find((r) => r.id === id);
   if (!restaurant) return { title: '맛집 정보' };
   
   return {
@@ -28,8 +29,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function RestaurantDetailPage({ params }: PageProps) {
-  const restaurant = restaurantsData.find((r) => r.id === params.id);
+export default async function RestaurantDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const restaurant = restaurantsData.find((r) => r.id === id);
 
   if (!restaurant) {
     notFound();

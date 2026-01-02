@@ -8,11 +8,12 @@ import { ARTICLE_CATEGORY_LABELS } from '@/lib/constants';
 import styles from './page.module.scss';
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const article = articlesData.find((a) => a.id === params.id);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const article = articlesData.find((a) => a.id === id);
   if (!article) return { title: '아티클' };
   
   return {
@@ -26,8 +27,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function ArticleDetailPage({ params }: PageProps) {
-  const article = articlesData.find((a) => a.id === params.id);
+export default async function ArticleDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const article = articlesData.find((a) => a.id === id);
 
   if (!article) {
     notFound();

@@ -11,11 +11,12 @@ import { Review } from '@/types/medical';
 import styles from './page.module.scss';
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export function generateMetadata({ params }: PageProps): Metadata {
-  const clinic = clinicsData.find((c) => c.id === params.id);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  const clinic = clinicsData.find((c) => c.id === id);
   if (!clinic) return { title: '클리닉 정보' };
   
   return {
@@ -29,8 +30,9 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-export default function ClinicDetailPage({ params }: PageProps) {
-  const clinic = clinicsData.find((c) => c.id === params.id);
+export default async function ClinicDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const clinic = clinicsData.find((c) => c.id === id);
 
   if (!clinic) {
     notFound();

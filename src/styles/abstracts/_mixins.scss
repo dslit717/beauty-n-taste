@@ -41,7 +41,7 @@
 
 // Aspect Ratio
 @mixin aspect-ratio($w, $h) {
-  aspect-ratio: $w / $h;
+  aspect-ratio: #{$w} / #{$h};
 }
 
 // Hide scrollbar
