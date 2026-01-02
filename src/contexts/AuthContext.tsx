@@ -31,6 +31,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     // 환경 변수가 없으면 초기화 중단
     if (!supabaseRef.current) {
+      console.error('❌ Supabase 클라이언트 초기화 실패: 환경 변수가 설정되지 않았습니다.');
+      console.error('Vercel에서 NEXT_PUBLIC_SUPABASE_URL과 NEXT_PUBLIC_SUPABASE_ANON_KEY를 설정했는지 확인하세요.');
       setLoading(false);
       return;
     }
@@ -56,7 +58,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // 카카오 로그인
   const signInWithKakao = () => {
-    supabaseRef.current?.auth.signInWithOAuth({
+    if (!supabaseRef.current) {
+      alert('Supabase 클라이언트가 초기화되지 않았습니다. 환경 변수를 확인해주세요.');
+      return;
+    }
+    supabaseRef.current.auth.signInWithOAuth({
       provider: 'kakao',
       options: {
         redirectTo: `${window.location.origin}/auth/callback`,
@@ -66,7 +72,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // 구글 로그인
   const signInWithGoogle = () => {
-    supabaseRef.current?.auth.signInWithOAuth({
+    if (!supabaseRef.current) {
+      alert('Supabase 클라이언트가 초기화되지 않았습니다. 환경 변수를 확인해주세요.');
+      return;
+    }
+    supabaseRef.current.auth.signInWithOAuth({
       provider: 'google',
       options: {
         redirectTo: `${window.location.origin}/auth/callback`,
