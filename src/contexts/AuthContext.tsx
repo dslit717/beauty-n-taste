@@ -1,15 +1,15 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode, useRef } from 'react';
-import { User, Session } from '@supabase/supabase-js';
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import type { User, Session } from '@supabase/supabase-js';
 import { createClient } from '@/lib/supabase/client';
 
 interface AuthContextType {
   user: User | null;
   loading: boolean;
-  signInWithKakao: () => void;
-  signInWithGoogle: () => void;
-  signOut: () => void;
+  signInWithKakao: () => Promise<void>;
+  signInWithGoogle: () => Promise<void>;
+  signOut: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -17,52 +17,48 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const supabaseRef = useRef<ReturnType<typeof createClient> | null>(null);
+  const [supabase] = useState(() => createClient());
 
   useEffect(() => {
-    // 클라이언트에서만 실행되도록 보장
-    if (typeof window === 'undefined') {
+    if (!supabase) {
+      console.error('Supabase 클라이언트 초기화 실패');
       setLoading(false);
       return;
     }
 
-    // 클라이언트 초기화 (브라우저에서만 실행됨)
-    supabaseRef.current = createClient();
+    // 초기 세션 확인
+    const initAuth = async () => {
+      try {
+        const { data: { session } } = await supabase.auth.getSession();
+        setUser(session?.user ?? null);
+      } catch (error) {
+        console.error('세션 확인 오류:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    // 환경 변수가 없으면 초기화 중단
-    if (!supabaseRef.current) {
-      console.error('❌ Supabase 클라이언트 초기화 실패: 환경 변수가 설정되지 않았습니다.');
-      console.error('Vercel에서 NEXT_PUBLIC_SUPABASE_URL과 NEXT_PUBLIC_SUPABASE_ANON_KEY를 설정했는지 확인하세요.');
-      setLoading(false);
-      return;
-    }
-
-    const supabase = supabaseRef.current;
-
-    // 현재 세션 확인
-    supabase.auth.getSession().then(({ data: { session } }: { data: { session: Session | null } }) => {
-      setUser(session?.user ?? null);
-      setLoading(false);
-    });
+    initAuth();
 
     // 인증 상태 변경 리스너
     const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event: string, session: Session | null) => {
         setUser(session?.user ?? null);
-        setLoading(false);
       }
     );
 
-    return () => subscription.unsubscribe();
-  }, []);
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [supabase]);
 
-  // 카카오 로그인
-  const signInWithKakao = () => {
-    if (!supabaseRef.current) {
-      alert('Supabase 클라이언트가 초기화되지 않았습니다. 환경 변수를 확인해주세요.');
+  const signInWithKakao = async () => {
+    if (!supabase) {
+      alert('Supabase 클라이언트가 초기화되지 않았습니다.');
       return;
     }
-    supabaseRef.current.auth.signInWithOAuth({
+
+    await supabase.auth.signInWithOAuth({
       provider: 'kakao',
       options: {
         redirectTo: `${window.location.origin}/auth/callback`,
@@ -70,13 +66,13 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
   };
 
-  // 구글 로그인
-  const signInWithGoogle = () => {
-    if (!supabaseRef.current) {
-      alert('Supabase 클라이언트가 초기화되지 않았습니다. 환경 변수를 확인해주세요.');
+  const signInWithGoogle = async () => {
+    if (!supabase) {
+      alert('Supabase 클라이언트가 초기화되지 않았습니다.');
       return;
     }
-    supabaseRef.current.auth.signInWithOAuth({
+
+    await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
         redirectTo: `${window.location.origin}/auth/callback`,
@@ -84,9 +80,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
   };
 
-  // 로그아웃
-  const signOut = () => {
-    supabaseRef.current?.auth.signOut();
+  const signOut = async () => {
+    if (!supabase) return;
+    await supabase.auth.signOut();
   };
 
   return (
@@ -98,7 +94,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
 export function useAuth() {
   const context = useContext(AuthContext);
-  if (!context) throw new Error('useAuth must be used within AuthProvider');
+  if (!context) {
+    throw new Error('useAuth must be used within AuthProvider');
+  }
   return context;
 }
 
