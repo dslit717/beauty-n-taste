@@ -52,8 +52,8 @@ export function FeaturedSection() {
                   swiper.params.navigation.nextEl = medicalNextRef.current;
                 }
               }}
-              spaceBetween={16}
-              slidesPerView={1}
+              spaceBetween={10}
+              slidesPerView={1.1} 
               slidesPerGroup={1}
               breakpoints={{
                 640: { slidesPerView: 2, slidesPerGroup: 2 },
@@ -108,8 +108,8 @@ export function FeaturedSection() {
                   swiper.params.navigation.nextEl = tasteNextRef.current;
                 }
               }}
-              spaceBetween={16}
-              slidesPerView={1}
+              spaceBetween={10}
+              slidesPerView={1.1} 
               slidesPerGroup={1}
               breakpoints={{
                 640: { slidesPerView: 2, slidesPerGroup: 2 },

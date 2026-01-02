@@ -5,11 +5,13 @@
 @mixin xl { @media (min-width: 1280px) { @content; } }
 
 // Container
-@mixin container {
+@mixin container($include-padding: true) {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 1rem;
+  @if $include-padding {
+    padding: 0 1rem;
+  }
 }
 
 // Flexbox

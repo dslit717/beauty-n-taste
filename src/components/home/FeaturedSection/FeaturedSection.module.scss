@@ -9,7 +9,7 @@
 }
 
 .container {
-  @include container;
+  @include container(false); 
 }
 
 .row {
@@ -19,6 +19,7 @@
 .sectionHeader {
   @include flex-between;
   margin-bottom: 1.5rem;
+  padding: 0 1rem;
 }
 
 .sectionTitle {
@@ -35,10 +36,19 @@
 
 .swiperWrapper {
   position: relative;
+  padding-left: 20px; 
+  
+  @include md {
+    padding: 0; 
+  }
 }
 
 .swiper {
-  overflow: hidden;
+  overflow: visible;
+  
+  @include md {
+    overflow: hidden; 
+  }
 }
 
 .navButton {
@@ -49,13 +59,17 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: absolute;
   z-index: 10;
-  display: flex;
+  display: none; // 모바일에서 숨김
   align-items: center;
   justify-content: center;
   top: 45%;
   transform: translateY(-50%);
   cursor: pointer;
   color: $gray-900;
+
+  @include md {
+    display: flex;
+  }
 
   &:global(.swiper-button-disabled) {
     display: none;
