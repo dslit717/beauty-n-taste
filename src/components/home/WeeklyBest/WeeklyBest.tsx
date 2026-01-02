@@ -74,8 +74,7 @@ export function WeeklyBest() {
         // rank 순으로 정렬
         combined.sort((a, b) => a.rank - b.rank);
         setItems(combined.slice(0, 5));
-      } catch (error) {
-        console.error('Failed to fetch weekly best:', error);
+      } catch {
       }
     };
 

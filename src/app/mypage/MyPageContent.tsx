@@ -34,8 +34,7 @@ export function MyPageContent({ user }: MyPageContentProps) {
 
   const handleLogout = async () => {
     setIsLoggingOut(true);
-    signOut();
-    router.push('/');
+    await signOut();
   };
 
   const formatDate = (dateString: string) => {

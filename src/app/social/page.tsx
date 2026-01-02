@@ -32,8 +32,7 @@ function SocialContent_() {
         const response = await fetch(`/api/social?${params}`);
         const data = await response.json();
         setContents(data.data);
-      } catch (error) {
-        console.error('Failed to fetch data:', error);
+      } catch {
       } finally {
         setLoading(false);
       }

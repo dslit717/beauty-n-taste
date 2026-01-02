@@ -33,8 +33,7 @@ function MagazineContent() {
         const response = await fetch(`/api/articles?${params}`);
         const data = await response.json();
         setArticles(data.data);
-      } catch (error) {
-        console.error('Failed to fetch articles:', error);
+      } catch {
       } finally {
         setLoading(false);
       }

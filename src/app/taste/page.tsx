@@ -39,8 +39,7 @@ function TasteContent() {
         const response = await fetch(`/api/restaurants?${params}`);
         const data = await response.json();
         setRestaurants(data.data);
-      } catch (error) {
-        console.error('Failed to fetch restaurants:', error);
+      } catch {
       } finally {
         setLoading(false);
       }

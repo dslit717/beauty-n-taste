@@ -39,8 +39,7 @@ function CommunityContent() {
         } else {
           setEvents(data.data);
         }
-      } catch (error) {
-        console.error('Failed to fetch data:', error);
+      } catch {
       } finally {
         setLoading(false);
       }

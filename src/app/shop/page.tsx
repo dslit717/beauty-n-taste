@@ -33,8 +33,7 @@ function ShopContent() {
         const response = await fetch(`/api/products?${params}`);
         const data = await response.json();
         setProducts(data.data);
-      } catch (error) {
-        console.error('Failed to fetch products:', error);
+      } catch {
       } finally {
         setLoading(false);
       }

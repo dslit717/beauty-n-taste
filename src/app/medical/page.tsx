@@ -36,8 +36,7 @@ function MedicalContent() {
         const response = await fetch(`/api/treatments?${params}`);
         const data = await response.json();
         setTreatments(data.data);
-      } catch (error) {
-        console.error('Failed to fetch treatments:', error);
+      } catch {
       } finally {
         setLoading(false);
       }
@@ -60,8 +59,7 @@ function MedicalContent() {
         const response = await fetch(`/api/clinics?${params}`);
         const data = await response.json();
         setClinics(data.data);
-      } catch (error) {
-        console.error('Failed to fetch clinics:', error);
+      } catch {
       } finally {
         setLoading(false);
       }
