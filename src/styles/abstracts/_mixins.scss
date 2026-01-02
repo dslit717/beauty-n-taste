@@ -9,6 +9,7 @@
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+  overflow: hidden;
   @if $include-padding {
     padding: 0 1rem;
   }
