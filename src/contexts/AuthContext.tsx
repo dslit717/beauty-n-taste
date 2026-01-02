@@ -27,10 +27,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
 
     // 클라이언트 초기화 (브라우저에서만 실행됨)
-    try {
-      supabaseRef.current = createClient();
-    } catch (error) {
-      console.warn('Supabase client initialization failed:', error);
+    supabaseRef.current = createClient();
+
+    // 환경 변수가 없으면 초기화 중단
+    if (!supabaseRef.current) {
       setLoading(false);
       return;
     }
