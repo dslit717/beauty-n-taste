@@ -1,0 +1,197 @@
+[
+  {
+    "id": "inf1",
+    "platform": "influencer",
+    "title": "이사배",
+    "description": "뷰티 유튜버 대표주자. 메이크업 튜토리얼과 뷰티 제품 리뷰로 유명합니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=800",
+    "url": "https://www.youtube.com/@risabae",
+    "author": "YouTube",
+    "category": "뷰티",
+    "followers": 3200000
+  },
+  {
+    "id": "inf2",
+    "platform": "influencer",
+    "title": "회사원A",
+    "description": "직장인 브이로그와 맛집 탐방으로 사랑받는 라이프스타일 유튜버.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800",
+    "url": "https://www.youtube.com/@calarygirl",
+    "author": "YouTube",
+    "category": "라이프스타일",
+    "followers": 1800000
+  },
+  {
+    "id": "inf3",
+    "platform": "influencer",
+    "title": "디렉터 파이",
+    "description": "피부과 전문의 출신. 시술 정보와 스킨케어 과학적 분석 콘텐츠.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800",
+    "url": "https://www.youtube.com/@director_pihyunjung",
+    "author": "YouTube",
+    "category": "메디컬",
+    "followers": 1500000
+  },
+  {
+    "id": "inf4",
+    "platform": "influencer",
+    "title": "먹어볼래",
+    "description": "먹방과 맛집 리뷰 전문 유튜버. 솔직한 후기로 인기.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800",
+    "url": "https://www.youtube.com/@TryToEat",
+    "author": "YouTube",
+    "category": "미식",
+    "followers": 2100000
+  },
+  {
+    "id": "inf5",
+    "platform": "influencer",
+    "title": "레오제이",
+    "description": "남성 뷰티 유튜버. 그루밍과 스킨케어 정보를 전달합니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=800",
+    "url": "https://www.youtube.com/@LeoJMakeup",
+    "author": "YouTube",
+    "category": "뷰티",
+    "followers": 1200000
+  },
+  {
+    "id": "inf6",
+    "platform": "influencer",
+    "title": "소근커플",
+    "description": "커플 브이로그와 데이트 코스, 맛집 추천 콘텐츠.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=800",
+    "url": "https://www.youtube.com/@소근커플",
+    "author": "YouTube",
+    "category": "라이프스타일",
+    "followers": 980000
+  },
+  {
+    "id": "s1",
+    "platform": "youtube",
+    "title": "피코레이저 1년 후기 솔직하게 말씀드립니다",
+    "description": "피코레이저 시술 1년 동안 3회 받은 생생한 후기! 효과, 비용, 다운타임 모두 공개합니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800",
+    "url": "https://www.youtube.com/watch?v=example1",
+    "author": "디렉터 파이",
+    "publishedAt": "2024-12-20",
+    "views": 125000,
+    "likes": 3200
+  },
+  {
+    "id": "s2",
+    "platform": "youtube",
+    "title": "강남 숨은 맛집 브이로그 | 시술 후 가기 좋은 곳",
+    "description": "시술 받고 편하게 먹을 수 있는 강남 맛집 투어! 부드러운 음식 위주로 골랐어요.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800",
+    "url": "https://www.youtube.com/watch?v=example2",
+    "author": "회사원A",
+    "publishedAt": "2024-12-18",
+    "views": 89000,
+    "likes": 2100
+  },
+  {
+    "id": "s3",
+    "platform": "youtube",
+    "title": "스킨부스터 종류별 비교 | 리쥬란 vs 쥬베룩 vs 엑소좀",
+    "description": "스킨부스터 어떤 거 맞아야 할지 고민이시라면 이 영상 보세요!",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800",
+    "url": "https://www.youtube.com/watch?v=example3",
+    "author": "디렉터 파이",
+    "publishedAt": "2024-12-15",
+    "views": 210000,
+    "likes": 5600
+  },
+  {
+    "id": "s4",
+    "platform": "instagram",
+    "title": "오늘의 애프터눈 티 ☕️",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800",
+    "url": "https://www.instagram.com/p/example1",
+    "author": "@risabae_official",
+    "publishedAt": "2024-12-22",
+    "likes": 45210
+  },
+  {
+    "id": "s5",
+    "platform": "instagram",
+    "title": "시술 전후 비교 🌟",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=800",
+    "url": "https://www.instagram.com/p/example2",
+    "author": "@leoj_official",
+    "publishedAt": "2024-12-21",
+    "likes": 89320
+  },
+  {
+    "id": "s6",
+    "platform": "instagram",
+    "title": "분위기 좋은 카페 발견 📸",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800",
+    "url": "https://www.instagram.com/p/example3",
+    "author": "@sogeuncouple",
+    "publishedAt": "2024-12-20",
+    "likes": 62340
+  },
+  {
+    "id": "s7",
+    "platform": "instagram",
+    "title": "오늘의 디저트 🍰",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800",
+    "url": "https://www.instagram.com/p/example4",
+    "author": "@eat_it_official",
+    "publishedAt": "2024-12-19",
+    "likes": 34560
+  },
+  {
+    "id": "s8",
+    "platform": "instagram",
+    "title": "파인다이닝 데이트 🍽️",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+    "url": "https://www.instagram.com/p/example5",
+    "author": "@a_workaholic",
+    "publishedAt": "2024-12-18",
+    "likes": 78910
+  },
+  {
+    "id": "s9",
+    "platform": "instagram",
+    "title": "힐링 타임 🌿",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800",
+    "url": "https://www.instagram.com/p/example6",
+    "author": "@risabae_official",
+    "publishedAt": "2024-12-17",
+    "likes": 23450
+  },
+  {
+    "id": "s10",
+    "platform": "blog",
+    "title": "[상세후기] 리쥬란 힐러 3회 완료 후 솔직 리뷰",
+    "description": "리쥬란 힐러 시술 전 고민부터 시술 과정, 3회 완료 후 피부 변화까지 상세하게 기록했습니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800",
+    "url": "https://blog.naver.com/example1",
+    "author": "뷰티리포터",
+    "publishedAt": "2024-12-19",
+    "views": 15600
+  },
+  {
+    "id": "s11",
+    "platform": "blog",
+    "title": "[맛집탐방] 청담동 프렌치 레스토랑 방문기",
+    "description": "예약 필수인 청담동 파인다이닝 맛집! 코스 메뉴 구성과 분위기, 가격 정보를 상세히 공유합니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800",
+    "url": "https://blog.naver.com/example2",
+    "author": "미식가의하루",
+    "publishedAt": "2024-12-17",
+    "views": 8900
+  },
+  {
+    "id": "s12",
+    "platform": "blog",
+    "title": "[비교분석] 피코레이저 vs 토닝 어떤 게 나을까?",
+    "description": "색소 치료에 효과적인 피코레이저와 토닝의 차이점, 각각 추천하는 피부 타입, 비용 비교까지 정리했습니다.",
+    "thumbnailUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800",
+    "url": "https://blog.naver.com/example3",
+    "author": "스킨케어매니아",
+    "publishedAt": "2024-12-15",
+    "views": 23400
+  }
+]

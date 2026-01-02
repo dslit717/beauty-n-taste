@@ -1,0 +1,90 @@
+[
+  {
+    "id": "c1",
+    "name": "청담 S클리닉",
+    "description": "피부과 전문의 5인 진료, 최신 장비 보유. 프리미엄 스킨케어와 안티에이징 시술 전문 클리닉입니다.",
+    "address": "서울 강남구 청담동 123-45",
+    "phone": "02-1234-5678",
+    "rating": 4.9,
+    "reviewCount": 328,
+    "specialties": ["리프팅", "레이저", "스킨케어"],
+    "images": [
+      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800",
+      "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800"
+    ],
+    "isBnTSelection": true,
+    "hours": "평일 10:00-20:00, 토 10:00-17:00",
+    "selectionReason": "전문의 비율 100%, 프리미엄 장비 완비, 청결한 시설",
+    "doctors": [
+      { "name": "김지수", "title": "대표원장", "specialty": "리프팅/안티에이징" },
+      { "name": "박현우", "title": "원장", "specialty": "레이저/색소" }
+    ],
+    "facilities": ["VIP룸", "파우더룸", "발렛파킹", "무료 Wi-Fi"]
+  },
+  {
+    "id": "c2",
+    "name": "압구정 뷰티클리닉",
+    "description": "섬세한 시술과 자연스러운 결과를 추구하는 프리미엄 클리닉. 1:1 맞춤 상담으로 개인화된 시술을 제공합니다.",
+    "address": "서울 강남구 압구정로 456",
+    "phone": "02-2345-6789",
+    "rating": 4.8,
+    "reviewCount": 256,
+    "specialties": ["주사시술", "리프팅", "피부관리"],
+    "images": [
+      "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800",
+      "https://images.unsplash.com/photo-1629909615957-be38d48fbbe4?w=800"
+    ],
+    "isBnTSelection": true,
+    "hours": "평일 10:00-21:00, 토 10:00-18:00",
+    "selectionReason": "높은 고객 만족도, 세심한 사후 관리, 럭셔리한 인테리어",
+    "doctors": [
+      { "name": "이서연", "title": "대표원장", "specialty": "필러/보톡스" },
+      { "name": "최민준", "title": "원장", "specialty": "리프팅" }
+    ],
+    "facilities": ["개인 상담실", "최신 레이저 장비", "무료 주차"]
+  },
+  {
+    "id": "c3",
+    "name": "강남 퍼펙트피부과",
+    "description": "대학병원 출신 전문의진의 체계적인 진료와 시술. 안전하고 효과적인 시술을 약속합니다.",
+    "address": "서울 강남구 테헤란로 789",
+    "phone": "02-3456-7890",
+    "rating": 4.7,
+    "reviewCount": 189,
+    "specialties": ["레이저", "여드름", "색소"],
+    "images": [
+      "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800",
+      "https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800"
+    ],
+    "isBnTSelection": true,
+    "hours": "평일 09:30-19:00, 토 09:30-15:00",
+    "selectionReason": "대학병원 전문의, 체계적인 진료 시스템, 합리적인 가격",
+    "doctors": [
+      { "name": "정하늘", "title": "대표원장", "specialty": "레이저/색소" }
+    ],
+    "facilities": ["넓은 대기실", "키즈존", "무료 주차"]
+  },
+  {
+    "id": "c4",
+    "name": "신사동 글로우클리닉",
+    "description": "글로벌 스탠다드의 시술과 케어. 자연스러움과 아름다움의 조화를 추구합니다.",
+    "address": "서울 강남구 신사동 654-32",
+    "phone": "02-4567-8901",
+    "rating": 4.9,
+    "reviewCount": 412,
+    "specialties": ["물광주사", "스킨부스터", "탄력관리"],
+    "images": [
+      "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800",
+      "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800"
+    ],
+    "isBnTSelection": true,
+    "hours": "평일 11:00-21:00, 토 11:00-18:00",
+    "selectionReason": "SNS 화제 클리닉, 트렌디한 시술, 아티스트급 시술력",
+    "doctors": [
+      { "name": "한예진", "title": "대표원장", "specialty": "물광/스킨케어" },
+      { "name": "윤도현", "title": "원장", "specialty": "리프팅/탄력" }
+    ],
+    "facilities": ["포토존", "VIP룸", "애프터케어 라운지"]
+  }
+]
+

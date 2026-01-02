@@ -1,0 +1,68 @@
+[
+  {
+    "id": "cr1",
+    "userId": "u1",
+    "userName": "뷰티러버",
+    "type": "treatment",
+    "targetId": "t1",
+    "targetName": "피코레이저",
+    "rating": 5,
+    "content": "피코레이저 3회차 받았는데 확실히 기미가 옅어졌어요! 통증도 거의 없고 다운타임도 짧아서 직장인에게 딱이에요. 강력 추천합니다!",
+    "images": ["https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400"],
+    "createdAt": "2024-12-28",
+    "likes": 42
+  },
+  {
+    "id": "cr2",
+    "userId": "u2",
+    "userName": "맛집탐험가",
+    "type": "restaurant",
+    "targetId": "r1",
+    "targetName": "라미띠에",
+    "rating": 5,
+    "content": "시술 후 특별한 날 방문했는데 분위기도 음식도 완벽했어요. 소화에 부담 없는 코스로 잘 즐겼습니다. 데이트 코스로 강추!",
+    "images": ["https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400", "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400"],
+    "createdAt": "2024-12-26",
+    "likes": 38
+  },
+  {
+    "id": "cr3",
+    "userId": "u3",
+    "userName": "스킨케어덕후",
+    "type": "product",
+    "targetId": "p3",
+    "targetName": "프리미엄 콜라겐 앰플 세트",
+    "rating": 4,
+    "content": "리쥬란 시술 후 홈케어용으로 구매했어요. 흡수가 빠르고 다음날 피부가 촉촉해지는 느낌! 가격대비 만족합니다.",
+    "images": ["https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400"],
+    "createdAt": "2024-12-24",
+    "likes": 27
+  },
+  {
+    "id": "cr4",
+    "userId": "u4",
+    "userName": "힐링족",
+    "type": "restaurant",
+    "targetId": "r3",
+    "targetName": "카페 드 플뢰르",
+    "rating": 5,
+    "content": "레이저 시술 후 조용히 쉬기 좋은 카페예요. 인테리어가 너무 예쁘고 디저트도 맛있어요. 사진 찍기에도 최고!",
+    "images": ["https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400"],
+    "createdAt": "2024-12-22",
+    "likes": 56
+  },
+  {
+    "id": "cr5",
+    "userId": "u5",
+    "userName": "뷰티초보",
+    "type": "treatment",
+    "targetId": "t2",
+    "targetName": "스킨부스터",
+    "rating": 5,
+    "content": "처음으로 스킨부스터 받았는데 피부가 완전 달라졌어요! 건조함이 사라지고 화장이 잘 먹어요. 정기적으로 받을 예정입니다.",
+    "images": [],
+    "createdAt": "2024-12-20",
+    "likes": 31
+  }
+]
+

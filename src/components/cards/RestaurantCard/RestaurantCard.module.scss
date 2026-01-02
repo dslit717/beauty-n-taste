@@ -1,0 +1,52 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $gray-900;
+  flex-shrink: 0;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.reviewCount {
+  font-weight: 400;
+  color: $gray-500;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: $gray-500;
+}
+
+.priceSection {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  padding-top: 1rem;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $gray-900;
+}
+

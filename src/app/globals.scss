@@ -1,0 +1,11 @@
+@use '@/styles/main';
+@use '@/styles/abstracts/mixins' as *;
+
+// 모바일에서 하단 네비게이션 공간 확보
+.app-container {
+  padding-bottom: 60px;
+  
+  @include lg {
+    padding-bottom: 0;
+  }
+}

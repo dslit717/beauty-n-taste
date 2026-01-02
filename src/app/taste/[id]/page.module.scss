@@ -1,0 +1,202 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.page {
+  min-height: 100vh;
+  background-color: $white;
+}
+
+.hero {
+  position: relative;
+  height: 300px;
+  background-color: $gray-100;
+
+  @include md { height: 400px; }
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 0%, rgba($black, 0.3) 100%);
+}
+
+.container {
+  @include container;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+.content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $gray-900;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+
+    @include md { font-size: 2.5rem; }
+  }
+}
+
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1rem;
+  color: $gray-900;
+
+  svg {
+    color: $gray-900;
+  }
+}
+
+.ratingValue {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-left: 0.25rem;
+}
+
+.reviewCount {
+  font-size: 0.875rem;
+  color: $gray-500;
+  margin-left: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  color: $gray-600;
+  line-height: 1.6;
+  margin-top: 1rem;
+
+  @include md { font-size: 1.125rem; }
+}
+
+.info {
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $gray-900;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+    color: $gray-700;
+
+    svg {
+      flex-shrink: 0;
+      color: $gray-500;
+    }
+  }
+}
+
+.cuisine {
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $gray-900;
+    margin-bottom: 1rem;
+  }
+}
+
+.cuisineList {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+.tags {
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $gray-900;
+    margin-bottom: 1rem;
+  }
+}
+
+.tagList {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 0.875rem;
+  color: $gray-600;
+}
+
+.priceSection {
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $gray-900;
+    margin-bottom: 1rem;
+  }
+}
+
+.priceValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $gray-900;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid $gray-200;
+
+  @include md {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.notFound {
+  @include flex-center;
+  min-height: 400px;
+
+  p {
+    font-size: 1.125rem;
+    color: $gray-500;
+  }
+}

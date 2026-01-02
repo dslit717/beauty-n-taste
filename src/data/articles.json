@@ -1,0 +1,75 @@
+[
+  {
+    "id": "a1",
+    "title": "피코레이저 후 꼭 먹어야 할 음식 5가지",
+    "excerpt": "피코레이저 시술 후 빠른 회복을 위해 추천하는 음식들을 소개합니다.",
+    "content": "피코레이저 시술 후에는 피부 재생에 도움이 되는 음식을 섭취하는 것이 좋습니다...",
+    "category": "after-care",
+    "author": "김뷰티",
+    "publishedAt": "2024-12-20",
+    "imageUrl": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800",
+    "tags": ["피코레이저", "회복음식", "애프터케어"],
+    "readTime": 5
+  },
+  {
+    "id": "a2",
+    "title": "보톡스 시술과 어울리는 디저트 페어링",
+    "excerpt": "보톡스 시술 후 가볍게 즐길 수 있는 디저트 추천.",
+    "content": "보톡스 시술 후에는 딱딱하지 않은 부드러운 디저트가 좋습니다...",
+    "category": "pairing",
+    "author": "이테이스트",
+    "publishedAt": "2024-12-18",
+    "imageUrl": "https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800",
+    "tags": ["보톡스", "디저트", "페어링"],
+    "readTime": 4
+  },
+  {
+    "id": "a3",
+    "title": "2024 뷰티 트렌드: 자연스러운 피부결 시대",
+    "excerpt": "올해 가장 주목받는 뷰티 트렌드와 추천 시술을 알아봅니다.",
+    "content": "2024년 뷰티 트렌드의 핵심은 '자연스러움'입니다...",
+    "category": "trend",
+    "author": "박트렌드",
+    "publishedAt": "2024-12-15",
+    "imageUrl": "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=800",
+    "tags": ["2024트렌드", "자연스러움", "피부결"],
+    "readTime": 7
+  },
+  {
+    "id": "a4",
+    "title": "리프팅 시술 전후 식단 가이드",
+    "excerpt": "리프팅 시술의 효과를 극대화하는 식단 관리법을 소개합니다.",
+    "content": "리프팅 시술 전에는 콜라겐 합성을 돕는 음식을...",
+    "category": "after-care",
+    "author": "김뷰티",
+    "publishedAt": "2024-12-12",
+    "imageUrl": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
+    "tags": ["리프팅", "식단", "콜라겐"],
+    "readTime": 6
+  },
+  {
+    "id": "a5",
+    "title": "강남 시술 후 가기 좋은 브런치 맛집 TOP 5",
+    "excerpt": "시술 후 부담 없이 즐길 수 있는 강남 브런치 맛집을 소개합니다.",
+    "content": "시술 후에는 소화가 편하고 자극이 적은 음식이 좋습니다...",
+    "category": "pairing",
+    "author": "이테이스트",
+    "publishedAt": "2024-12-10",
+    "imageUrl": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800",
+    "tags": ["강남", "브런치", "맛집"],
+    "readTime": 5
+  },
+  {
+    "id": "a6",
+    "title": "스킨부스터와 함께하는 힐링 티타임",
+    "excerpt": "스킨부스터 시술 후 피부 수분 유지에 도움이 되는 차 추천.",
+    "content": "스킨부스터 시술 후에는 충분한 수분 섭취가 중요합니다...",
+    "category": "pairing",
+    "author": "박트렌드",
+    "publishedAt": "2024-12-08",
+    "imageUrl": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800",
+    "tags": ["스킨부스터", "차", "수분"],
+    "readTime": 4
+  }
+]
+

@@ -1,0 +1,116 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $white;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: $gray-900;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $gray-700;
+    font-weight: 500;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kakaoButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background-color: #FEE500;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3C1E1E;
+  cursor: pointer;
+  @include transition(background-color, transform);
+
+  &:hover {
+    background-color: #F5DC00;
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: $gray-400;
+  font-size: 0.875rem;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background-color: $gray-200;
+  }
+}
+
+.socialButtons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.googleButton {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid $gray-200;
+  background-color: $white;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  @include transition(border-color, box-shadow);
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.loading {
+  @include flex-center;
+  min-height: 200px;
+  font-size: 1rem;
+  color: $gray-500;
+}
+

@@ -1,0 +1,115 @@
+[
+  {
+    "id": "p1",
+    "name": "피코레이저 1회 바우처",
+    "category": "clinic-voucher",
+    "description": "색소 침착 개선과 피부 톤 정돈에 효과적인 피코레이저 시술권",
+    "price": 180000,
+    "originalPrice": 250000,
+    "imageUrl": "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800",
+    "tags": ["피코레이저", "색소", "시술권"],
+    "rating": 4.8,
+    "reviewCount": 234,
+    "isNew": false,
+    "isBest": true
+  },
+  {
+    "id": "p2",
+    "name": "스킨부스터 리쥬란 1회",
+    "category": "clinic-voucher",
+    "description": "피부 재생과 탄력 개선을 위한 리쥬란 스킨부스터 시술권",
+    "price": 220000,
+    "originalPrice": 300000,
+    "imageUrl": "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=800",
+    "tags": ["리쥬란", "스킨부스터", "탄력"],
+    "rating": 4.9,
+    "reviewCount": 189,
+    "isNew": true,
+    "isBest": true
+  },
+  {
+    "id": "p3",
+    "name": "프리미엄 콜라겐 앰플 세트",
+    "category": "beauty",
+    "description": "고농축 콜라겐 앰플 7개입 세트, 시술 후 홈케어용",
+    "price": 89000,
+    "originalPrice": 120000,
+    "imageUrl": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800",
+    "tags": ["콜라겐", "앰플", "홈케어"],
+    "rating": 4.7,
+    "reviewCount": 456,
+    "isNew": false,
+    "isBest": true
+  },
+  {
+    "id": "p4",
+    "name": "시카 리커버리 크림",
+    "category": "beauty",
+    "description": "시술 후 진정과 재생을 돕는 시카 성분 크림",
+    "price": 45000,
+    "imageUrl": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800",
+    "tags": ["시카", "진정", "재생"],
+    "rating": 4.6,
+    "reviewCount": 312,
+    "isNew": true,
+    "isBest": false
+  },
+  {
+    "id": "p5",
+    "name": "프리미엄 티 컬렉션 선물세트",
+    "category": "taste",
+    "description": "시술 후 회복에 좋은 허브티 6종 컬렉션",
+    "price": 68000,
+    "originalPrice": 85000,
+    "imageUrl": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=800",
+    "tags": ["허브티", "선물세트", "회복"],
+    "rating": 4.8,
+    "reviewCount": 178,
+    "isNew": false,
+    "isBest": true
+  },
+  {
+    "id": "p6",
+    "name": "콜라겐 젤리 스틱 30포",
+    "category": "inner-beauty",
+    "description": "하루 한 포, 간편하게 즐기는 저분자 콜라겐 젤리",
+    "price": 52000,
+    "originalPrice": 65000,
+    "imageUrl": "https://images.unsplash.com/photo-1505576399279-565b52d4ac71?w=800",
+    "tags": ["콜라겐", "젤리", "이너뷰티"],
+    "rating": 4.5,
+    "reviewCount": 567,
+    "isNew": false,
+    "isBest": true
+  },
+  {
+    "id": "p7",
+    "name": "프렌치 마카롱 선물세트",
+    "category": "taste",
+    "description": "시술 후 부드럽게 즐기기 좋은 프리미엄 마카롱 12개입",
+    "price": 38000,
+    "imageUrl": "https://images.unsplash.com/photo-1569864358642-9d1684040f43?w=800",
+    "tags": ["마카롱", "디저트", "선물"],
+    "rating": 4.7,
+    "reviewCount": 234,
+    "isNew": true,
+    "isBest": false
+  },
+  {
+    "id": "p8",
+    "name": "히알루론산 이너뷰티 드링크",
+    "category": "inner-beauty",
+    "description": "피부 수분 충전을 위한 히알루론산 음료 10병",
+    "price": 42000,
+    "imageUrl": "https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=800",
+    "tags": ["히알루론산", "드링크", "수분"],
+    "rating": 4.4,
+    "reviewCount": 289,
+    "isNew": false,
+    "isBest": false
+  }
+]
+
+
+
+

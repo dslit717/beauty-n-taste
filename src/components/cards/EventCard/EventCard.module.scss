@@ -1,0 +1,16 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.date {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: $gray-500;
+
+  svg {
+    color: $gray-400;
+  }
+}
+

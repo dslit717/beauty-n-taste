@@ -1,0 +1,27 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: $gray-900;
+  flex-shrink: 0;
+
+  svg {
+    flex-shrink: 0;
+  }
+}
+
+.reviewCount {
+  font-weight: 400;
+  color: $gray-500;
+}

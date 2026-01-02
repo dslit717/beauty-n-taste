@@ -1,0 +1,5 @@
+export { ClinicCard } from './ClinicCard';
+
+
+
+

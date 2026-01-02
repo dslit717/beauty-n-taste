@@ -1,0 +1,39 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: '**',
+      },
+    ],
+  },
+  webpack: (config, { dev }) => {
+    if (dev) {
+      const rules = config.module.rules.find((rule) => typeof rule.oneOf === 'object');
+      if (rules) {
+        rules.oneOf.forEach((rule) => {
+          if (rule.use && Array.isArray(rule.use)) {
+            rule.use.forEach((loader) => {
+              if (
+                loader.loader &&
+                loader.loader.includes('css-loader') &&
+                loader.options &&
+                loader.options.modules
+              ) {
+                loader.options.modules.localIdentName = '[local]';
+              }
+            });
+          }
+        });
+      }
+    }
+    return config;
+  },
+};
+
+module.exports = nextConfig;

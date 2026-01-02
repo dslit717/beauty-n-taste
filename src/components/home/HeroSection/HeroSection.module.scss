@@ -1,0 +1,175 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.hero {
+  position: relative;
+  // 모바일: 전체 화면
+  margin-top: -56px; // 헤더 높이만큼 위로
+  
+  // 데스크탑: container 적용
+  @include lg {
+    @include container;
+    margin-top: 0;
+  }
+}
+
+.swiper {
+  width: 100%;
+  overflow: hidden;
+  
+  // 데스크탑에서만 border-radius
+  @include lg {
+    border-radius: 0.5rem;
+  }
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  // 모바일: 적당한 높이
+  height: 480px;
+  
+  @include md {
+    height: 500px;
+  }
+  
+  // 데스크탑: 고정 높이
+  @include lg {
+    height: 550px;
+  }
+}
+
+.image {
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.35) 60%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $white;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: $white;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: $white;
+  white-space: pre-line;
+  font-weight: 300;
+  line-height: 1.4;
+
+  @include md { 
+    font-size: 1.0625rem; 
+  }
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  @include flex-center;
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  color: $white;
+  cursor: pointer;
+  @include transition(opacity);
+  
+  // 모바일에서 숨김
+  display: none;
+  
+  @include lg {
+    display: flex;
+  }
+  
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.navPrev {
+  left: 1rem;
+  @include md { left: 2rem; }
+  @include lg { left: 3rem; }
+}
+
+.navNext {
+  right: 1rem;
+  @include md { right: 2rem; }
+  @include lg { right: 3rem; }
+}
+
+.pagination {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  z-index: 10;
+  
+  @include md { bottom: 2.5rem; }
+}
+
+.progressBar {
+  width: 120px;
+  height: 2px;
+  background-color: rgba($white, 0.3);
+  
+  @include md { width: 160px; }
+}
+
+.progress {
+  height: 100%;
+  background-color: $white;
+  transition: width 0.3s ease;
+}
+
+.pageNumber {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: $white;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.current {
+  font-weight: 600;
+}
+
+.separator {
+  opacity: 0.6;
+  margin: 0 0.25rem;
+}
+
+.total {
+  opacity: 0.6;
+}

@@ -1,0 +1,74 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  background-color: $gray-100;
+  border-radius: 0.5rem;
+
+  &.square { @include aspect-ratio(1, 1); }
+  &.portrait { @include aspect-ratio(3, 4); }
+  &.landscape { @include aspect-ratio(4, 3); }
+  &.wide { @include aspect-ratio(16, 9); }
+}
+
+.image {
+  object-fit: cover;
+}
+
+.badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content {
+  padding: 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $gray-900;
+  line-height: 1.25;
+  @include line-clamp(1);
+}
+
+.description {
+  font-size: 0.875rem;
+  color: $gray-500;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  @include line-clamp(1);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+  color: $gray-500;
+
+  svg { flex-shrink: 0; }
+}

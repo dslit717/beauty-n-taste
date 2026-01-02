@@ -1,0 +1,2 @@
+export { MagazinePreview } from './MagazinePreview';
+

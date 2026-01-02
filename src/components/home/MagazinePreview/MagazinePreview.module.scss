@@ -1,0 +1,118 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.section {
+  padding: 3rem 0;
+  background-color: $gray-50;
+
+  @include md { padding: 4rem 0; }
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  @include flex-between;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: $gray-900;
+  letter-spacing: 0.05em;
+}
+
+.link {
+  @include flex-center;
+  @include transition(color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  @include lg { grid-template-columns: 1fr 1fr; }
+}
+
+.featuredCard {
+  height: 100%;
+
+  > div:first-child {
+    border-radius: 0;
+  }
+}
+
+.featuredContent {
+  padding: 1.5rem !important;
+}
+
+.featuredTitle {
+  font-size: 1.25rem !important;
+  
+  @include md { font-size: 1.5rem !important; }
+}
+
+.category {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $gray-600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.categorySmall {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $gray-600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.listCard {
+  display: flex;
+  gap: 1rem;
+  background-color: $white;
+  border-radius: 0.5rem;
+  @include transition(background-color);
+  overflow: hidden;
+}
+
+.listImage {
+  position: relative;
+  width: 100px;
+  height: 80px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: $gray-100;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.listContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+
+  h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $gray-900;
+    margin-bottom: 0.25rem;
+    @include line-clamp(2);
+  }
+}
+

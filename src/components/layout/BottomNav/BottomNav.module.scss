@@ -1,0 +1,53 @@
+@use '@/styles/abstracts/variables' as *;
+@use '@/styles/abstracts/mixins' as *;
+
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background-color: $white;
+  border-top: 1px solid $gray-200;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  
+  // 데스크탑에서 숨김
+  @include lg {
+    display: none;
+  }
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  flex: 1;
+  padding: 0.5rem 0;
+  color: $gray-500;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  @include transition(color);
+  
+  // button 리셋
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    stroke-width: 1.5;
+  }
+
+  &:hover,
+  &.active {
+    color: $gray-900;
+  }
+}
+
+
