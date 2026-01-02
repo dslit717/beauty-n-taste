@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, ReactNode, useRef } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { createClient } from '@/lib/supabase/client';
 
@@ -17,9 +17,26 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const supabase = createClient();
+  const supabaseRef = useRef<ReturnType<typeof createClient> | null>(null);
 
   useEffect(() => {
+    // 클라이언트에서만 실행되도록 보장
+    if (typeof window === 'undefined') {
+      setLoading(false);
+      return;
+    }
+
+    // 클라이언트 초기화 (브라우저에서만 실행됨)
+    try {
+      supabaseRef.current = createClient();
+    } catch (error) {
+      console.warn('Supabase client initialization failed:', error);
+      setLoading(false);
+      return;
+    }
+
+    const supabase = supabaseRef.current;
+
     // 현재 세션 확인
     supabase.auth.getSession().then(({ data: { session } }: { data: { session: Session | null } }) => {
       setUser(session?.user ?? null);
@@ -35,11 +52,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     );
 
     return () => subscription.unsubscribe();
-  }, [supabase.auth]);
+  }, []);
 
   // 카카오 로그인
   const signInWithKakao = () => {
-    supabase.auth.signInWithOAuth({
+    supabaseRef.current?.auth.signInWithOAuth({
       provider: 'kakao',
       options: {
         redirectTo: `${window.location.origin}/auth/callback`,
@@ -49,7 +66,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // 구글 로그인
   const signInWithGoogle = () => {
-    supabase.auth.signInWithOAuth({
+    supabaseRef.current?.auth.signInWithOAuth({
       provider: 'google',
       options: {
         redirectTo: `${window.location.origin}/auth/callback`,
@@ -59,7 +76,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // 로그아웃
   const signOut = () => {
-    supabase.auth.signOut();
+    supabaseRef.current?.auth.signOut();
   };
 
   return (
