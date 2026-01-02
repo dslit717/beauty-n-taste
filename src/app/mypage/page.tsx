@@ -5,7 +5,7 @@ import { MyPageContent } from './MyPageContent';
 import styles from './page.module.scss';
 
 export default async function MyPage() {
-  const supabase = createClient();
+  const supabase = await createClient();
   
   // 서버에서 인증 체크 (보안!)
   const { data: { user }, error } = await supabase.auth.getUser();
